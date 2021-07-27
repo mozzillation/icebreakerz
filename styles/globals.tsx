@@ -25,12 +25,13 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 		width: 100vw;
 		min-height: 100vh;
 		margin: 0;
+		cursor: url('/cursor.png') 39 39, auto;
 	}
 
   body {
     color: ${(props) => props.theme.colors.black};
 		font-size: 18px;
-	  font-family: 'Krona One', sans-serif;
+	  font-family: 'Krona One', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 	  background-color: ${(props) => props.theme.colors.background};
 	  padding: 0;
 	  margin: 0;
