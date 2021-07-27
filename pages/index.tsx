@@ -4,13 +4,19 @@ import { getCards, getSchema } from '@/utils'
 
 import View from '@/components/View'
 import Deck from '@/components/Deck'
+import Head from 'next/head'
 
 
 const Cards = ({ cards, palette }: { cards: string[], palette: string[] }) => {
 
 
 	return (
-		<Deck cards={cards} palette={palette} />
+		<>
+			<Head>
+				<title>Icebreakerz</title>
+			</Head>
+			<Deck cards={cards} palette={palette} />
+		</>
 	)
 }
 
