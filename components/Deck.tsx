@@ -151,6 +151,7 @@ const Card = styled(animated.div)`
   box-shadow: 0 12px 50px -10px rgba(50, 50, 73, 0.1), 0 10px 10px -10px rgba(50, 50, 73, 0.05);
   font-size: 32px;
   text-align: center;
+  cursor: drag;
   padding: ${props => props.theme.spacing.mid};
 `
 
