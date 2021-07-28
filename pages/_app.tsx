@@ -1,5 +1,6 @@
 import type { AppProps /*, AppContext */ } from 'next/app'
 import styled, { ThemeProvider } from 'styled-components'
+import Head from 'next/head'
 
 import { theme, GlobalStyle } from '@/styles/globals'
 import { AnimatePresence } from 'framer-motion'
