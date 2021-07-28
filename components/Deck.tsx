@@ -4,6 +4,9 @@ import { useDrag } from '@use-gesture/react'
 import styled from 'styled-components'
 import { getSchema } from '@/utils'
 import { shuffleArray } from '@/utils/functions'
+import { AnimatePresence, motion } from 'framer-motion'
+
+import Back from '@/components/Back'
 // Helpers
 
 const from = (_i: number) => ({
@@ -19,7 +22,7 @@ const to = (i: number) => ({
 	y: i * -4,
 	scale: 1,
 	rot: -10 + Math.random() * 20,
-	delay: i * 100,
+	delay: 500 + i * 100,
 	opacity: 1,
 })
 
@@ -106,6 +109,8 @@ const Deck = ({ cards: initialCards, palette, category }: { cards: string[], pal
 					)
 				})}
 			</Flex>
+
+			<Back backgroundColor={backgroundColor} />
 		</Background>
 	)
 }
@@ -121,6 +126,11 @@ const Background = styled(animated.div)`
 	bottom: 0;
 	left: 0;
 	cursor: url('/cursor.png') 16 16, auto;
+
+	@media all and ${(props) => props.theme.mq.pwa} {
+		border-top-left-radius: 32px;
+		border-top-right-radius: 32px;
+	}
 `
 
 const Flex = styled.div`
