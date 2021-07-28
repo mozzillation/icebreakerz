@@ -28,19 +28,20 @@ const Wrapper = styled(motion.div)`
 
 
   @media all and ${(props) => props.theme.mq.pwa} {
-		padding: ${props => props.theme.spacing.sml} ${props => props.theme.spacing.sml} ${props => props.theme.spacing.lrg};
+		padding: ${props => props.theme.spacing.sml} ${props => props.theme.spacing.sml} ${props => props.theme.spacing.mid};
 	}
 `
 
 const Button = styled(motion.div)`
-  padding: ${props => props.theme.spacing.sml} ${props => props.theme.spacing.mid};
-  font-size: 18px;
+  padding: ${props => props.theme.spacing.xsml} ${props => props.theme.spacing.sml};
+  font-size: 14px;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 32px;
   box-shadow: 0 12px 50px -10px rgba(50, 50, 73, 0.1), 0 10px 10px -10px rgba(50, 50, 73, 0.05);
   backdrop-filter: blur(24px);
   visibility: visible;
+  color: #ffffff;
 
   @media ${(props) => props.theme.mq.desktop}{
     visibility: hidden;
