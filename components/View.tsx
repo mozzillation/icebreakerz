@@ -12,7 +12,7 @@ const View = ({ children }: { children?: React.ReactNode }) => {
 
 const Module = styled(motion.main)`
   width: 100%;
-  min-height: 100%;
+	overflow: hidden;
 `
 
 export default View

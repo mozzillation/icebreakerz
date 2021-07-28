@@ -1,0 +1,19 @@
+- name: Funny Questions
+  slug: funny
+  emoji: 🤡
+
+- name: Work-related Questions
+  slug: work
+  emoji: 💼
+
+- name: Deep & Philosofic Questions
+  slug: deep
+  emoji: 🔍
+
+- name: NSFW Questions
+  slug: nsfw
+  emoji: 🍆
+
+- name: All Questions
+  slug: all
+  emoji: 💥
