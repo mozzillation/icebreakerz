@@ -21,11 +21,11 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 	}
 
 	html, body, #__next{
-		height: 100vh;
-		width: 100vw;
-		min-height: 100vh;
+		height: 100%;
+		width: 100%;
+		min-height: 100%;
 		margin: 0;
-		cursor: url('/cursor.png') 39 39, auto;
+		overflow: hidden;
 	}
 
   body {
@@ -35,7 +35,6 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 	  background-color: ${(props) => props.theme.colors.background};
 	  padding: 0;
 	  margin: 0;
-		height: 100%;
 	  letter-spacing: 0.015em;
 	  word-spacing: 0.001em;
 	  -webkit-font-smoothing: antialiased;

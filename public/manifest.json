@@ -1,0 +1,13 @@
+{
+  "name": "Icebreakerz",
+  "short_name": "Icebreakerz",
+  "description": "",
+  "lang": "en-EN",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ccdce6",
+  "icons": [
+   
+  ]
+}

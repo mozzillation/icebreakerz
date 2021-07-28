@@ -1,4 +1,4 @@
-import getCards from './cards'
+import { getCategories, getCardsCategory } from './cards'
 import getSchema from './palette'
 
-export { getCards, getSchema }
+export { getCategories, getCardsCategory, getSchema }

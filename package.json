@@ -1,7 +1,8 @@
 {
   "name": "icebreakerz",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
+  "private": false,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,8 +13,8 @@
     "@react-spring/web": "^9.2.4",
     "@use-gesture/react": "^10.0.0-beta.21",
     "framer-motion": "^4.1.17",
+    "gsap": "^3.7.1",
     "js-yaml-loader": "^1.2.2",
-    "mongodb": "^4.0.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -25,9 +26,8 @@
     "@types/styled-components": "^5.1.11",
     "eslint": "7.31.0",
     "eslint-config-next": "11.0.1",
-    "next-plugin-yaml": "^1.0.1",
+    "next-pwa": "^5.2.24",
     "typescript": "^4.3.5",
-    "yaml": "^1.10.2",
-    "yaml-ts-loader": "^1.0.0"
+    "yaml": "^1.10.2"
   }
 }

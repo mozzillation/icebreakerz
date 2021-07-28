@@ -1,34 +1,33 @@
-import { useState } from 'react'
+import { GetStaticProps, GetStaticPropsContext } from 'next'
 
-import { getCards, getSchema } from '@/utils'
-
-import View from '@/components/View'
-import Deck from '@/components/Deck'
 import Head from 'next/head'
+import View from '@/components/View'
+import Selector from '@/components/Selector'
 
+import { getCategories } from '@/utils'
+import { Category } from '@/utils/domain'
 
-const Cards = ({ cards, palette }: { cards: string[], palette: string[] }) => {
-
+const CategorySelection = ({ categories }: { categories: Category[] }) => {
 
 	return (
 		<>
 			<Head>
 				<title>Icebreakerz</title>
 			</Head>
-			<Deck cards={cards} palette={palette} />
+			<View>
+				<Selector categories={categories} />
+			</View>
 		</>
 	)
 }
 
-export async function getServerSideProps() {
-	const cards = getCards()
-	const palette = getSchema(cards)
 
+export const getStaticProps: GetStaticProps = async () => {
+	const categories = getCategories()
 	return {
-		props: { cards, palette }
+		props: { categories }
 	}
-
 }
 
 
-export default Cards
+export default CategorySelection
