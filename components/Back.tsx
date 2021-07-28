@@ -40,10 +40,10 @@ const Button = styled(motion.div)`
   border-radius: 32px;
   box-shadow: 0 12px 50px -10px rgba(50, 50, 73, 0.1), 0 10px 10px -10px rgba(50, 50, 73, 0.05);
   backdrop-filter: blur(24px);
-  visibility: hidden;
+  visibility: visible;
 
-  @media ${(props) => props.theme.mq.tablet}{
-    visibility: visible;
+  @media ${(props) => props.theme.mq.desktop}{
+    visibility: hidden;
   }
 `
 

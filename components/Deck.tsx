@@ -126,10 +126,11 @@ const Background = styled(animated.div)`
 	bottom: 0;
 	left: 0;
 	cursor: url('/cursor.png') 16 16, auto;
+	overflow: hidden;
 
 	@media all and ${(props) => props.theme.mq.pwa} {
-		border-top-left-radius: 32px;
-		border-top-right-radius: 32px;
+		border-top-left-radius: 40px;
+		border-top-right-radius: 40px;
 	}
 `
 
