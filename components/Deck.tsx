@@ -110,7 +110,7 @@ const Deck = ({ cards: initialCards, palette, category }: { cards: string[], pal
 				})}
 			</Flex>
 
-			<Back backgroundColor={backgroundColor} />
+			<Back />
 		</Background>
 	)
 }
