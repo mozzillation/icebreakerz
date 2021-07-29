@@ -47,9 +47,8 @@ const Selector = ({ categories }: { categories: Category[] }) => {
 
 
 const Background = styled.div`
+  width: 100%;
   min-height: 100%;
-  will-change: background-color;
-  transition: background-color 0.1s;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -57,10 +56,11 @@ const Background = styled.div`
 	left: 0;
   overflow: scroll;
   padding: ${props => props.theme.spacing.xsml} ${props => props.theme.spacing.xsml} 0;
-  
+
   @media all and ${(props) => props.theme.mq.pwa} {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    background-color: ${(props) => props.theme.colors.background};
   }
 `
 

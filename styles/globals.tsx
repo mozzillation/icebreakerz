@@ -26,13 +26,18 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 		min-height: 100%;
 		margin: 0;
 		overflow: hidden;
+		background-color: ${(props) => props.theme.colors.background};
+
+		@media all and ${(props) => props.theme.mq.pwa} {
+			background-color: ${(props) => props.theme.colors.black};
+		}
 	}
 
   body {
     color: ${(props) => props.theme.colors.black};
 		font-size: 18px;
 	  font-family: 'Krona One', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-	  background-color: ${(props) => props.theme.colors.background};
+
 	  padding: 0;
 	  margin: 0;
 	  letter-spacing: 0.015em;
@@ -40,10 +45,6 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 	  -webkit-font-smoothing: antialiased;
 	  -moz-osx-font-smoothing: grayscale;
 	  text-rendering: optimizeLegibility;
-
-		@media all and ${(props) => props.theme.mq.pwa} {
-			background-color: ${(props) => props.theme.colors.black};
-		}
   }
 
 	h1, h2, h3, h4, h5, h6{
