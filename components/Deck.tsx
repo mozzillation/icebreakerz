@@ -127,6 +127,7 @@ const Background = styled(animated.div)`
 	left: 0;
 	cursor: url('/cursor.png') 16 16, auto;
 	overflow: hidden;
+	background-color: ${(props) => props.theme.colors.background};
 
 	@media all and ${(props) => props.theme.mq.pwa} {
 		border-top-left-radius: 40px;
