@@ -41,6 +41,9 @@ const GlobalStyle = createGlobalStyle<ThemeInterface>`
 	  -moz-osx-font-smoothing: grayscale;
 	  text-rendering: optimizeLegibility;
 
+		@media all and ${(props) => props.theme.mq.pwa} {
+			background-color: ${(props) => props.theme.colors.black};
+		}
   }
 
 	h1, h2, h3, h4, h5, h6{

@@ -57,6 +57,11 @@ const Background = styled.div`
 	left: 0;
   overflow: scroll;
   padding: ${props => props.theme.spacing.xsml} ${props => props.theme.spacing.xsml} 0;
+  
+  @media all and ${(props) => props.theme.mq.pwa} {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
 `
 
 
