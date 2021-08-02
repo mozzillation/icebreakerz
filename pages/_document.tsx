@@ -14,7 +14,7 @@ class MyDocument extends Document {
 				<Head>
 					<link rel="preconnect" href="https://fonts.googleapis.com" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-					<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet" />
+					<link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Inter:wght@400&display=swap" rel="stylesheet" />
 					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

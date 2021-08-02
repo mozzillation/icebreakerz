@@ -14,9 +14,7 @@ const CategorySelection = ({ categories }: { categories: Category[] }) => {
 			<Head>
 				<title>Icebreakerz</title>
 			</Head>
-			<View>
-				<Selector categories={categories} />
-			</View>
+			<Selector categories={categories} />
 		</>
 	)
 }

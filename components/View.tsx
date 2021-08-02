@@ -2,12 +2,18 @@ import { Power4 } from 'gsap'
 import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
+import CookieConsent from '@/components/CookieConsent'
+
 const View = ({ children }: { children?: React.ReactNode }) => {
 
 	return (
-		<Module initial={{ y: '100vh' }} animate={{ y: 0 }} exit={{ y: '100vh' }} transition={{ ease: Power4.easeInOut, duration: 1 }}>
-			{children}
-		</Module>
+		<>
+			<Module initial={{ y: '100vh' }} animate={{ y: 0 }} exit={{ y: '100vh' }} transition={{ ease: Power4.easeInOut, duration: 1 }}>
+				{children}
+				<CookieConsent />
+			</Module>
+
+		</>
 	)
 }
 

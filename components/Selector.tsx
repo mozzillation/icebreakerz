@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+
+import { Back } from 'gsap'
 import { Category } from '@/utils/domain'
+
+import Header from '@/components/Header'
+
+
 
 
 const container = {
@@ -11,15 +17,17 @@ const container = {
 		transition: {
 			duration: 0.25,
 			staggerChildren: 0.15,
-			delayChildren: 0.75
+			delayChildren: 1
 		}
 	}
 }
 
 const item = {
-	hidden: { opacity: 0, scale: 0.5 },
-	show: { opacity: 1, scale: 1, transition: { ease: 'backOut', duration: 0.5 } },
+	hidden: { opacity: 0, scale: 0.9 },
+	show: { opacity: 1, scale: 1, transition: { ease: Back.easeOut.config(1.4), duration: 0.5 } },
 }
+
+
 
 const Selector = ({ categories }: { categories: Category[] }) => {
 
@@ -28,6 +36,7 @@ const Selector = ({ categories }: { categories: Category[] }) => {
 			<Flex>
 				<AnimatePresence>
 					<motion.div variants={container} initial="hidden" animate="show" >
+						<Header variants={item} />
 						{categories.map(({ name, slug, emoji }, index) => (
 							<motion.div variants={item} key={index}>
 								<Link href={`/${slug}`} passHref >

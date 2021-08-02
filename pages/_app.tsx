@@ -2,6 +2,9 @@ import { useEffect } from 'react'
 import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { CookiesProvider } from 'react-cookie';
+import { DefaultSeo } from 'next-seo';
+import SEO from '@/next-seo';
 
 import styled, { ThemeProvider } from 'styled-components'
 import { AnimatePresence } from 'framer-motion'
@@ -50,14 +53,17 @@ function App({ Component, pageProps, router }: AppProps) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 			</Head>
-			<ThemeProvider theme={theme}>
-				<GlobalStyle />
-				<AnimatePresence>
-					<View key={router.route}>
-						<Component {...pageProps} />
-					</View>
-				</AnimatePresence>
-			</ThemeProvider>
+			<DefaultSeo {...SEO} />
+			<CookiesProvider>
+				<ThemeProvider theme={theme}>
+					<GlobalStyle />
+					<AnimatePresence>
+						<View key={router.route}>
+							<Component {...pageProps} />
+						</View>
+					</AnimatePresence>
+				</ThemeProvider>
+			</CookiesProvider>
 		</>
 	)
 }
