@@ -1,6 +1,6 @@
 # Icebreakerz: 200+ icebreaker questions for your workshops, meetings or parties
 
-Icebreakerz is a small tool to animate meetings or parties with some icebreaker questions.
+Icebreakerz is a small tool to liven up meetings or parties with +200 icebreaker questions.
 
 ## Credits
 The questions used in the tool were taken from some online content, including: 
