@@ -10,10 +10,15 @@ import { Category } from '@/utils/domain'
 
 const Cards = ({ cards, palette, category }: { cards: string[], palette: string[], category: string }) => {
 
+	const title = category.split(' ')
+		.map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+		.join(' ')
+
+
 	return (
 		<>
 			<Head>
-				<title>Cards / Icebreakerz</title>
+				<title>{title} Cards / Icebreakerz</title>
 			</Head>
 			<Deck cards={cards} palette={palette} category={category} />
 		</>

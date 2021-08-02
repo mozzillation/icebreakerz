@@ -42,10 +42,6 @@ const Button = styled(motion.div)`
   backdrop-filter: blur(24px);
   visibility: visible;
   color: #ffffff;
-
-  @media ${(props) => props.theme.mq.desktop}{
-    visibility: hidden;
-  }
 `
 
 export default Back
