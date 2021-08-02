@@ -42,6 +42,7 @@ const Button = styled(motion.div)`
   backdrop-filter: blur(24px);
   visibility: visible;
   color: #ffffff;
+	cursor: pointer;
 `
 
 export default Back
