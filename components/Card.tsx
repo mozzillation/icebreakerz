@@ -21,6 +21,10 @@ const Flex = styled.div`
   flex-direction: column;
   padding: ${props => props.theme.spacing.sml};
   background: #9095fb;
+  @media all and ${(props) => props.theme.mq.pwa} {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
 `
 
 const Wrapper = styled.div`

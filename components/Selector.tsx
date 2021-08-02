@@ -36,7 +36,6 @@ const Selector = ({ categories }: { categories: Category[] }) => {
 			<Flex>
 				<AnimatePresence>
 					<motion.div variants={container} initial="hidden" animate="show" >
-						<Header variants={item} />
 						{categories.map(({ name, slug, emoji }, index) => (
 							<motion.div variants={item} key={index}>
 								<Link href={`/${slug}`} passHref >
@@ -47,6 +46,14 @@ const Selector = ({ categories }: { categories: Category[] }) => {
 								</Link>
 							</motion.div>
 						))}
+						<motion.div variants={item}>
+							<Link href={`/about`} passHref >
+								<AboutButton whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.01, transition: { duration: 0.05 } }}>
+									<Text>About Icebreakerz</Text>
+								</AboutButton>
+							</Link>
+						</motion.div>
+
 					</motion.div>
 				</AnimatePresence>
 			</Flex>
@@ -102,9 +109,31 @@ const Button = styled(motion.div)`
   margin-bottom: ${props => props.theme.spacing.xsml};
   cursor: pointer;
 `
+
+const AboutButton = styled(motion.div)`
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  padding: ${props => props.theme.spacing.sml};
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+  flex-direction: row;
+  text-transform: uppercase;
+  border-radius: 16px;
+  margin-bottom: ${props => props.theme.spacing.xsml};
+  cursor: pointer;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color: #000;
+	opacity: 0.3;
+`
+
+
 const Text = styled.div`
   width: 100%;
-
 `
 
 const Emoji = styled.div`
