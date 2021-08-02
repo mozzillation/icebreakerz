@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const Card = ({ children }: { children: ReactNode }) => {
+const Card = ({ children }: { children: React.ReactNode }) => {
 
 	return (
 		<Flex>

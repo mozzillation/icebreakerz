@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { CookiesProvider } from 'react-cookie';
 import { DefaultSeo } from 'next-seo';
-import SEO from '@/next-seo';
+import SEO from '@/seo';
 
 import styled, { ThemeProvider } from 'styled-components'
 import { AnimatePresence } from 'framer-motion'

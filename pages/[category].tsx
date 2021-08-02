@@ -42,7 +42,7 @@ export const getStaticProps = async ({ params }: Params) => {
 		}
 	}
 
-	const { name } = allCategories.find(el => el.slug === category)
+	const { name } = allCategories.find((el: Category) => el.slug === category)
 	const palette = getSchema(cards)
 
 	return {
